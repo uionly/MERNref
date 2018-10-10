@@ -10,8 +10,7 @@ mongo_connection();
 // Creating APP 
 const app = express();
 
-
-// Using morgan to log 
+// Using morgan to log http
 app.use(morgan('dev'));
 // Handling CORS
 app.use((req, res, next) => {
@@ -28,6 +27,7 @@ app.use((req, res, next) => {
 });
 // Use body parser to reead requests easily
 app.use(bodyParser.json());
+
 
 
 // Handle different Routes  
